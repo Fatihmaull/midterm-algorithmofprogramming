@@ -1,0 +1,92 @@
+	using System;
+	
+  class Program
+	{
+	    static void Main(string[] args)
+	    {
+	        Console.WriteLine("======TEST KURSUS PROGRAM KOMPUTER======");
+	        Console.WriteLine("Pastikan bahwa anda layak menuju jenjang selanjutnya!");
+         Console.WriteLine("Silahkan input digit nilai ujian anda, tanpa koma");
+	        // user input nilai ujian mereka untuk Java, C, Pascal
+	        Console.WriteLine("Masukkan nilai ujian Java:");
+	        int nilaiJava = Convert.ToInt32(Console.ReadLine());
+	        Console.WriteLine("Masukkan nilai ujian Bahasa C:");
+	        int nilaiC = Convert.ToInt32(Console.ReadLine());
+	        Console.WriteLine("Masukkan nilai ujian Pascal:");
+	        int nilaiPascal = Convert.ToInt32(Console.ReadLine());
+	
+	        // Meng-rata-ratakan nilai akhir yang sudah diinput oleh user
+	        double nilaiAkhir = (double)(nilaiJava + nilaiC + nilaiPascal) / 3;
+	
+	        // klasifikasi grade berdasarkan nilai akhir
+	        char grade;
+	        if (nilaiAkhir >= 91 && nilaiAkhir <= 100)
+	        {
+	            grade = 'A';
+	        }
+	        else if (nilaiAkhir >= 76 && nilaiAkhir <= 90)
+	        {
+	            grade = 'B';
+	        }
+	        else if (nilaiAkhir >= 60 && nilaiAkhir <= 75)
+	        {
+	            grade = 'C';
+	        }
+	        else if (nilaiAkhir >= 40 && nilaiAkhir <= 59)
+	        {
+	            grade = 'D';
+	        }
+	        else if (nilaiAkhir >= 1 && nilaiAkhir <= 39)
+	        {
+	            grade = 'E';
+	        }
+	        else
+	        {
+	            grade = '0';
+	        }
+	
+	        // print nilai akhir user dan grade yang dia dapat
+	        Console.WriteLine("Nilai Akhir: " + nilaiAkhir);
+	        Console.WriteLine("Grade: " + grade);
+	
+	        // biaya kursus berdasarkan grade
+	        int biayaKursus;
+	        switch (grade)
+	        {
+	            case 'A':
+	                biayaKursus = 50000;
+	                break;
+	            case 'B':
+	                biayaKursus = 150000;
+	                break;
+	            case 'C':
+	                biayaKursus = 250000;
+	                break;
+	            case 'D':
+	                biayaKursus = 350000;
+	                break;
+	            case 'E':
+	                biayaKursus = 450000;
+	                break;
+	            case '0':
+	                biayaKursus = 550000;
+	                break;
+	            default:
+	                biayaKursus = 0;
+	                break;
+	        }
+	
+	        // Menampilkan biaya kursus sesuai data yang telah didapat
+	        if (biayaKursus != 0)
+	        {
+	            Console.WriteLine("Biaya Kursus: Rp " + biayaKursus);
+	        }
+	        else
+	        {
+	
+	            Console.WriteLine("Maaf, Anda tidak memenuhi syarat untuk kursus tingkat lebih tinggi.");
+	        }
+	        
+	        Console.WriteLine("Muhammad Fatih Maulana 1237050140.");
+	    }
+	}
